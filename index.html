@@ -1,1041 +1,334 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>ComputaQ</title>
-	<meta name="author" content="Elly Bubala" />
-	<meta name="description" content="fullPage fixed full-screen backgrounds." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed,fullscreen,backgrounds,full-screen" />
-	<meta name="Resource-type" content="Document" />
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!--<link rel="stylesheet" type="text/css" href="css.css" />-->
-	<link rel="icon" href="imgs/computaqIcon.jpg">
-	<link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
-    <link rel="stylesheet" href="bootstrap-4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
-	<link rel="stylesheet" href="dist/mode.css">
-	<!--<link href="dist/coming-soon.min.css" rel="stylesheet">
-	<link href="dist/creative.css" rel="stylesheet">-->
-	<link href="dist/creative.min.css" rel="stylesheet">
-	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>ComputaQ — Simplify Your IT, Amplify Your Results</title>
+  <meta name="author" content="Computaq Zambia Limited" />
+  <meta name="description" content="ComputaQ is a Zambian Information Technology company delivering network services, process automation, server and cloud installation and maintenance, website and app development, CCTV surveillance and IT outsourcing tailored to your business." />
+  <meta name="keywords" content="IT company Zambia, network services, process automation, server cloud installation maintenance, website app development, CCTV surveillance installation, IT outsourcing, IT support Lusaka" />
 
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <!-- Set theme before paint to avoid a flash of the wrong colours -->
+  <script src="theme-init.js"></script>
 
-		<!-- Stylesheets -->
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="css/themify-icons.css"/>
-		<link rel="stylesheet" href="css/animate.css"/>
-		<link rel="stylesheet" href="css/owl.carousel.css"/>
-		<link rel="stylesheet" href="css/style.css"/>
-	<style>
-	/*actions*/
-			#actions{
-					position:fixed;
-					top: 73px;
-					left: 30px;
-					z-index: 99999;
-				}
-				#actions a{
-					background: rgba(0,0,0,0.8);
-					padding: 7px;
-					margin: 2px;
-					color: #ccc;
-					display: inline-block;
-				}
-				#actions a:hover{
-					color: #fff;
-					background: #81A140;
-				}
+  <!-- Latest Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- fullPage.js (v3.0.8, matches your uploaded files) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.8/dist/fullpage.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
-	/* Style for our header texts
-	* --------------------------------------- */
-	
-	p{
-		font-family: arial,helvetica;
-		color: #ff3c00;
-	}
-	
-	p.txtclass{
-	color: #DDD;
-	font-family: sans-serif;
-	text-align:left;
- 	}
-	
-	ul.listleft{
-	color: #fff;
-	font-family: sans-serif;
-	text-align:left;
-	}
-	
-	
-	h1{
-		font-size: 3em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-	}
-	
-	h3{
-		font-size: 2em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-	}
-	
-	/*.label_form{
-		font-size: 1em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-		
-	}*/
-	
-	i.icon1{
-		color: #FF9;
-		
-		display: inline-block;
-    	vertical-align: middle;
-    	transform: translateZ(0);
-    	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    	backface-visibility: hidden;
-    	-moz-osx-font-smoothing: grayscale;
-    	transition-duration: 0.3s;
-    	transition-property: transform;
-	}
-	
-	.hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-	}
-
-	.hvr-grow:hover,
-	.hvr-grow:focus,
-	.hvr-grow:active {
-    transform: scale(1.1);
-	}
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
-
-
-	/* Backgrounds will cover all the section
-	* --------------------------------------- */
-	#section0,
-	#section1,
-	#section2,
-	#section3,
-	#section4,
-	#section5,
-    #slide1,
-    #slide2,
-	#slide3{
-		background-size: cover;
-		background-attachment: fixed;
-	}
-
-	/* Defining each sectino background and styles
-	* --------------------------------------- */
-	#section0{
-		/*opacity:0.6;*/
-	}
-	#section0 h1{
-		top: 100%;
-		transform: translateY(-50%);
-		position: relative;
-		
-	}
-	#section1{
-		background-color:#2E112D;
-		padding: 0 0 0 0;
-			
-	}
-	#section2{
-		background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9) ), url(imgs/bg01.jpg);
-		padding: 6% 0 0 0;
-		background-color:#93C;
-		opacity:0.6;
-	}
-	#section3{
-		background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 6) ), url(imgs/bg06.jpg);
-		background-size:cover;
-		display:block;
-		width:100%;
-		height:100%;
-		padding: 8% 0 0 0;
-		backgroud-position:center;
-		background-repeat:no-repeat;
-		-o-background-size:cover;
-		-webkit-background-size:cover;
-		opacity:0.6;
-	}
-	#section3 h1{
-		color: #000;
-	}
-	
-	#section4{
-		
-		background-color:#93C;
-		/*padding: 6% 0 0 0;*/
-		
-	}
-	#section4 h1{
-		color: #000;
-	}
-
-#section5{
-		background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9) ), url(imgs/bg9.jpg);
-		padding: 6% 0 0 0;
-		opacity:0.6;
-	}
-	#section5 h1{
-		color: #000;
-	}
-	/*Adding background for the slides
-	* --------------------------------------- */
-	#slide1{
-		background-image: url(imgs/bg01.jpg);
-		padding: 6% 0 0 0;
-		height:100%;
-		backgroud-position:center;
-		background-repeat:no-repeat;
-		-o-background-size:100%;
-		-webkit-background-size:100%;
-	}
-	#slide2{
-		background-image: url(imgs/bg01.jpg);
-		padding: 6% 0 0 0;
-		backgroud-position:center;
-		background-repeat:no-repeat;
-		background-size:100%;
-		filter: grayscale(100%);
-	}
-
-	#slide3{
-		background-image: url(imgs/bg01.jpg);
-		padding: 3% 0 0 0;
-		backgroud-position:center;
-		background-repeat:no-repeat;
-		background-size:100%;
-		filter: grayscale(100%);
-	}
-
-	/* Overwriting styles for the navigation dots (to place it where we want)
-	* --------------------------------------- */
-	.fp-slidesNav.bottom{
-		bottom: 25px;
-	}
-
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-	
-	
-	/*Jambotrom*/
-	
-	
-	/* Services */
-	Portfolio img{
-		max-width:100%;
-	}
-
-	.row.no-padding [class*=col-]	{
-	padding:0;
-	}
-	
-	
-	
-	
-	 .flex-column { 
-       max-width : 260px;
-   }
-   .container {
-            background: #f9f9f9;
-        }
-      
-        img {
-            margin: 5px;
-        }
-	
-	/*big hero*/
-	#service1{
-		background-image: url(imgs/img3.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-		opacity:0.8;
-		/*background: linear-gradient( rgba(0.0,0,0,0), 
-					rgba(0, 0, 0, 0) ),
-					url(imgs/img3.jpg) 
-					no-repeat center center;
-		*/
-	}
-	#service2{
-		/*background-image: url(imgs/bg01.jpg);*/
-		background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9) ), url(imgs/bg01.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-	}
-	
-	#service3{
-		background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9) ), url(imgs/bg9.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-	}
-	
-	#service4{
-		background-image: url(imgs/bg08.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-	}
-	#service5{
-		background-image: url(imgs/bg08.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-		
-	}
-	
-	#service6{
-		background-image: url(imgs/bg08.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-	}
-	
-	#About_us{
-		background-image: url(imgs/img1.jpg);
-		height:100%;
-		backgroud-position:center;
-		background-repeat:no-repeat;
-		-o-background-size:100%;
-		-webkit-background-size:100%;
-		
-	}
-	
-	#box{
-		/*background-color:black;*/
-		border-size:2px;
-		width: 80px;
-  		padding: 30px;
-  		border-right: 1px solid Red;
-  		margin: 10px;
-	
-		}
-		
-	#box:Hover{
-	display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.5s;
-    transition-property: transform;
-	border: 1px solid Red;
-	background-color:white;
-	}
-	#box:Hover:hover,
-	#box:Hover:focus,
-	#box:Hover:active {
-    transform: scale(1.1);
-	
-	#serviceIcon {
-	img src:Url(imgs/img1.jpg)
-	}
-	
-	#Box2{
-		background-color:#FF9F00;
-		border-size:2px;
-		width: 80px;
-  		padding: 30px;
-  		border-right: 1px solid #FF9F00;
-  		margin: 10px;
-	}
-	#Box3{
-		background-image: url(imgs/bg08.jpg);
-		max-width:100%;
-        max-height:100%;
-        display: block;
-		background-size:cover;
-		opacity:0.8;
-	}
-	
-
-		/**************************************/
-
-
-
-
-	</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <div class="bg-aurora"></div>
+  <div class="bg-grain"></div>
 
-<a href="#">
-<img src="imgs/Translogo.png"  style="width:200px; height:100px; position:absolute;z-index:999; top: -20px; left: 0; margin:0px;">
-</a>
- 
-<div id="fullpage">
-
-<div id="mainNav"  class="container">
-  <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent fixed-top py-3" id="mainNav"  >
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-	
-		
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#About_us">About Us</a>
-      </li>
-	 <li class="nav-item">
-        <a class="nav-link" href="#Services">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Support">Support</a>
-      </li>
-	   <li class="nav-item">
-        <a class="nav-link" href="#Contact_us">Contact us</a>
-      </li>
-    </ul>
-    
-</div>
-
- 
-
-    
-	
-	<div class="section " id="section0">
-        
-		<section class="hero-section" class="section " id="section0">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 hero-text">
-						<h2>Simplify your <span>IT </span> <br>Amplify your Results</h2>
-						<h4>Elevate Your Business with Next-Generation Technology</h4>
-						<form class="hero-subscribe-from">
-							<input type="text" placeholder="Enter your email">
-							<button class="site-btn sb-gradients">Get Started</button>
-						</form>
-					</div>
-					<div class="col-md-6">
-						<img src="img/laptop.png" class="laptop-image" alt="">
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!--<div class="slide" id="slide">
-		
-					<header class="mastheaded">
-					    <div class="containd h-100">
-					      <div class="row h-100 align-items-center justify-content-center text-center">
-					        <div class="col-lg-10 align-self-end">
-					          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
-					          <hr class="divider my-4">
-					        </div>
-					        <div class="col-lg-8 align-self-baseline">
-					          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-					          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-					        </div>
-					      </div>
-					    </div>
-					  </header>
-		</div>-->
-    
-    </div>
-	<div class="section" id="section1">
-		<!-- About Us 
-  				<div class="embed-responsive embed-responsive-16by9 ">
-				
-    				<iframe class="embed-responsive-item" src="demo.html" style="height:85%; position:absolute; "></iframe>
-  				
-			</div>
-		-->	
-
-<fieldset class="slidenshow">
-
-  <!-- sliden 1 -->
-  <label class="sliden-button" for="slidenCheckbox1">About Us</label>
-  <input type="radio" id="slidenCheckbox1" name="sliden" checked></input>
-  <div class="sliden">
-    <div class="sliden__content txtclass">
-      <h1>Who we are</h1>
-	  <hr class="divider my-4">
-      <p class="txtclass">We are an Information Technology company providing creative and dynamic IT solution for all types of industries, 
-      We have established our selves around the gap and disconnet relating to IT services being consindered to be expensive and only for large organisations to manage</p>
-      <p class="txtclass">Besides that our Sevices can be tailored  to meet your current business module and enhence productivity in your opperation with different approch using our company behaviours</p>
-      <ul class="listleft">
-        <li><strong>Reliability: </strong>Consistency in the quality of delivery our services</li>
-        <li><strong>Innovation: </strong>Passionate dedication to translating ideas into</li>
-        <li><strong>Excellence: </strong>We will go an extra mile to produce high quality goods and services</li>
-        <li><strong>Customer Focus: </strong></li>
-        <li><strong>Sustainbility: </strong></li>
-      </ul>
-    </div>  
-  </div>
-
-  <!-- sliden 2 -->
- <label class="sliden-button" for="slidenCheckbox2">Our Mission</label>
-  <input type="radio" id="slidenCheckbox2" name="sliden"></input>
-  <div class="sliden">
-    <div class="sliden__content txtclass">
-      <h1>We Want our Clients to Enjoy our Services</h1>
-	  <hr class="divider my-4">
-      <p class="txtclass">Our mission statement is to Growth Through Technology and work closely with our clients to ensure that through the proper use of technology, we streamline business processes to help clients reduce cost, increase productivity and remain competitive in the ever changing world of technology.</p>
-      </br>
-      <p class="txtclass">In this modern hi-tech world, time is becoming more and more precious to business owners. The last thing you want is having to add your IT system to your list of worries. At ComputaQ strive to take those worries and hassles away from you so you can focus on running your business.</p>
-    </div> 
-  </div>
-
-  <!-- sliden 3 -->
-  <label class="sliden-button" for="slidenCheckbox3">Our Team</label>
-  <input type="radio" id="slidenCheckbox3" name="sliden"></input>
-  <div class="sliden">
-    <div class="sliden__content txtclass">
-      <h1>Our people make us great</h1>
-	  <hr class="divider my-4">
-      <p class="txtclass">Great work happen when a team of Passionate, honest, practical and skillfull work together to solve prolems and undertake task, We pride ourselves with the people in our team and we believe it is the one thing that makes our company special, woking wih us means you will interact with talented professionals who are ready to be challanged, solve difficult problems and think in new and creative ways</p>
-      </br>
-      <p class="txtclass">Our dedicated team has the knowledge and expertise to provide optimal solutions as we collaborate with you to to make this posible</p>
-    </div>  
-  </div>
-
-</div>
-		
-
-		
-			
-	
-<div class="section" id="section2">
-    
-		<div class="container-fluid embed-responsive" style="padding-top:70px;background-color: transparent; ">
-			<div class="row">
-				<div class="col" style="background-color:#FF9F00">
-					<div class="jumbotron" style="background-color:#FF9F00;">
-        				<h2>IT OUTSOURCING SERVICES</h2>
-        					<p class="lead" style="color:#FF9";>Our end-to-end services provide industry and technology expertise, solutions, frameworks and tooling to enable our clients to drive business agility, competitive advantage, transformation and cost efficiencies </p>
-        					<p><a href="#" target="" class="btn btn-success btn-lg" >Get started today</a></p>
-    				</div>
-				</div>
-			<div class="col" id="service1">
-					<div class="jumbotron" style="background-color: transparent;">
-        				
-        					<h2 style="color:#FF9F00; padding:15%; opacity:0.9;"><b>Technology is going forward dont be left behind</b></h2>
-        				
-    				</div>
-			</div>
-			</div>
-	</div>
-</div>
-			
-	
-<div class="section" id="section3">
-<div class="container">
-<h2>Services</h2>
-<hr class="divider my-1">
-	</hr>
-    <!--Row with two equal columns-->
-    <div class="row" >
-		<div class="col" id="box">
-			<a href="#osi">
-				<img src="imgs/icon9.png" style="width:80px">
-					<p>Live Desktop Support</p>
-			</a>
-		</div>
-				<div class="popup" id="osi">
-					<div class="popup-inner">
-					<div class="popup__photo">
-						<img src="imgs/img6.jpg" alt="" style="width:100%; height:80%;" >
-					</div>
-					<div class="popup__text">
-						<h1>How can we help</h1>
-						<hr class="divider my-4">
-						<p>You can call our line and share wih us your problem and our highly trained and friendly team will either remotely sort out your problem or take you through how to sort out your challange.</p>
-							<ul">
-								<li><p>Identify and solve computer software, hardware and website problems.</p></li>
-								<li><p>Analyse your problems and suggest how to prevent future problems</p></li>
-								
-							<ul>
-						
-						</br>
-						<img src="imgs/img5.jpg" style="width:100px">
-					</div>
-					<a class="popup__close" href="#">X</a>
-					</div>
-				</div>
-
-
-		<div class="col" id="box">
-			<a href="#net">
-				<img src="imgs/icon10.png" style="width:80px">
-					<p>Networking</p>
-			</a>
-		</div>
-				<div class="popup" id="net">
-					<div class="popup-inner">
-					<div class="popup__photo">
-						<img src="imgs/img7.jpg" alt="" style="width:100%">
-					</div>
-					<div class="popup__text">
-						<h1>Network Services That Work</h1>
-						<hr class="divider my-4">
-						<p>Our IT professionals know how to streamline intercompany networking and increase productivity by optimizing connectivity and permissions.</p>
-							<ul>
-								<li><p>Network Assesments</p></li>
-								<li><p>WAN/LAN design and implementation</p></li>
-								<li><p>Routing and Switching</p></li>
-								<li><p>Security appliances and firewalls</p></li>
-								<li><p>Wireless Services</p></li>
-							</ul>
-							</p>
-					</div>
-					<a class="popup__close" href="#">X</a>
-					</div>
-				</div>
-
-		<div class="col" id="box">
-			<a href="#pa">
-				<img src="imgs/icon11.png" style="width:80px">
-					<p>Process Automation</p>
-			</a>
-		</div>
-				<div class="popup" id="pa">
-					<div class="popup-inner">
-					<div class="popup__photo">
-						<img src="imgs\img8.jpg" style="width:100%; height:85%;">
-					</div>
-					<div class="popup__text">
-						<h1>Why Automate your Business</h1>
-						<hr class="divider my-4">
-						<p>Process automation enhances operations, finances, and stakeholder satisfaction. Some of the many compelling reasons to automate business processes include</p>
-							<ul><p>
-								<li>Standardized and streamlined processes</li>
-								<li>Greater time and cost savings</li>
-								<li>Better allocation of resources</li>
-								<li>Higher employee satisfaction</li>
-								<li>Improved visibility into process performance</li></p>
-							<ul>
-					
-					</div>
-
-					<a class="popup__close" href="#">X</a>
-					</div>
-				</div>
-
-    </div>
-    
-    <!--Row with three columns divided in 1:2:1 ratio-->
-    <div class="row" >
-
-	<div class="col" id="box">
-			<a href="#siam">
-				<img src="imgs/icon5.png" style="width:80px">
-					<p>Bulk SMS</p>
-			</a>
-		</div>
-				<div class="popup" id="siam">
-					<div class="popup-inner">
-					<div class="popup__photo">
-						<img src="imgs\img12.jpg" alt="">
-					</div>
-					<div class="popup__text">
-						<h1>Send hundreds of SMS with 1 click</h1>
-						<hr class="divider my-4">
-						<p>We provide a messaging system that allow you to broadcast SMS to keep in touch with your customers fast, right to their phones: - Many more!</p>
-							<ul>
-								<li>Announce new sales, branchs launches.</li>
-								<li>Send single announcements and notifications.</li>
-								<li>Send important updates OTP,Verifications,online events</li>
-								<li>Send personalised bulk sms</li>
-							<ul>
-					</div>
-					<a class="popup__close" href="#">X</a>
-					</div>
-				</div>
-    	
-		<div class="col" id="box">
-			<a href="#pans">
-				<img src="imgs/icon4.png" style="width:80px">
-					<p>Server installation and Maintenance</p>
-			</a>
-		</div>
-				<div class="popup" id="pans">
-					<div class="popup-inner">
-					<div class="popup__photo">
-						<img src="imgs\img11.jpg"  style="width:100%; height:90%;">
-					</div>
-					<div class="popup__text">
-						<h1>Server Setup and Installation Service</h1>
-						<hr class="divider my-4">
-						<p>Our Expert Server Setup and Installation Service Includes</p>
-							<ul>
-								<li>Server Monitoring</li>
-								<li>Server Administration & Troubleshooting</li>
-								<li>Security Assessment and Hardening Support</li>
-								<li>Performance Optimization</li>
-								<li>Migration Support</li>
-								<li>Application Support</li>
-							<ul/>
-					</div>
-					<a class="popup__close" href="#">X</a>
-					</div>
-				</div>
-		
-
-		<div class="col" id="box">
-			<a href="#wd">
-				<img src="imgs/icon6.png" style="width:80px">
-					<p>Website & App Development</p>
-			</a>
-		</div>
-				<div class="popup" id="wd">
-					<div class="popup-inner">
-					<div class="popup__photo">
-						<img src="imgs\img10.jpg" style="width:100%; height:90%;">
-					</div>
-					<div class="popup__text">
-						<h1>Websites for all devices</h1>
-						<hr class="divider my-4">
-						<p>Our web sites and applications are custom-built around your brand and respnsive on all devices</p>
-							<ul>
-								<li>Website Design & development</li>
-								<li>Content Management System</li>
-								<li>Social Media Integration — Facebook, Twitter, Youtube, Google+, etc</li>
-								<li>Mobile-Optimised Website</li>
-								<li>Web Application / Business Software</li>
-								<li>Mobile Application</li>
-
-							
-							</ul>
-					</div>
-					<a class="popup__close" href="#">X</a>
-					</div>
-				</div>
-        
-    </div>
-</div>
-	
-
-</div>
-				
- 
-
-<div class="section" id="section4">
-
-		<div class="container-fluid h-100 embed-responsive">
-					<div class="row h-100">
-						<div class="col" style="background-color:#FF9F00">
-							<div class="jumbotron" style="background-color:#FF9F00; margin:100px;">
-		        				<h2>Let's Get In Touch!</h2>
-		        					<p class="lead" style="color:#FF9";>Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-		        					<div id="jumbotron">
-				<div class="narrow">
-					<div class="col-4">
-	
-						<div class ="heading-underline">
-						</div>
-			       </div>
-					
-					
-				</div>
-			</div>
-		    				</div>
-						</div>
-					<div class="col" id="service2">
-							<div class="jumbotron" style="background-color: transparent;">
-		        				
-		        					
-									<div class="container bg-transparent">
-									  <h2 style="color:#FF9F00; padding:1%;" >Contact Us </h2>
-									  
-									  <form action="/action_page.php" class="needs-validation" novalidate >
-									    <div class="form-group">
-									      <label class="label_form" for="uname">Your Name</label>
-									      <input type="text" class="form-control" id="uname" placeholder="Enter Name" name="uname" required>
-									      <div class="valid-feedback">Valid.</div>
-									      <div class="invalid-feedback">Please fill out this field.</div>
-									    </div>
-									    <div class="form-group" >
-									      <label class="label_form" for="pwd">Your Phone Number:</label>
-									      <input type="Number" class="form-control" id="pwd" placeholder="Phone Number" name="pswd" required>
-									      <div class="valid-feedback">Valid.</div>
-									      <div class="invalid-feedback">Please fill out this field.</div>
-										  
-									    </div><label class="label_form" for="uname">Email</label></br>
-										<div class="input-group mb-3">
-										  
-									      <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email" required>
-									      <div class="input-group-append">
-									        <span class="input-group-text">@example.com</span>
-									      </div>
-									    </div>
-									  
-
-										 <div class="form-group">
-      									<label class="label_form" for="comment">Your Query/ Message</label>
-      										<textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
-    									</div>
-									    <button type="submit" class="btn btn-primary">Submit</button>
-									  </form>
-									</div>
-											        				
-											    				</div>
-														</div>
-														</div>
-												</div>
-									
-									
-									  
-									</div>
-									
-
-
-
-<div class="section" id="section5">
-			
-			<!-- Footer -->
-<footer class="page-footer font-small mdb-color pt-4">
-
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Footer links -->
-    <div class="row text-center text-md-left mt-3 pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h3 class="text-uppercase mb-4 font-weight-bold">Place of Business <hr class="divider my-4"></h3>
-        <p>
-		  <i class="fas fa-home mr-3"></i> AI Business Complex,</br> #12 second floor Chachacha Road,</br>Town Centre Area Lusaka, Zambia</p>
-      </p></div>
-      <!-- Grid column -->
-
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h3 class="text-uppercase mb-4 font-weight-bold">Products <hr class="divider my-4"></h3>
-        <p>
-          <a href="#!">Networking</a>
-        </p>
-        <p>
-          <a href="#!">Website Development</a>
-        </p>
-        <p>
-          <a href="#!"></a>
-        </p>
-        <p>
-          <a href="#!">Server Management</a>
-        </p>
-		 <p>
-          <a href="#!">HelpDesk Support</a>
-        </p>
-		 <p>
-          <a href="#!">Process Automation</a>
-        </p>
-		<p>
-          <a href="#!">Stationary supply</a>
-        </p>
+  <!-- ===== Navbar (outside #fullpage so it stays fixed) ===== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container container-x">
+      <a class="brand-mark" href="#home"><img src="img/Translogo.png" alt="ComputaQ Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home" data-menuanchor="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" data-menuanchor="about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-menuanchor="services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apps" data-menuanchor="apps">Apps</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why" data-menuanchor="why">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clients" data-menuanchor="clients">Clients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-menuanchor="contact">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button id="themeToggle" class="btn btn-theme w-100" type="button" aria-label="Toggle day / night mode" title="Toggle day / night mode">
+              <i class="bi bi-sun"></i><span class="theme-label ms-2 d-lg-none">Theme</span>
+            </button>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-glow w-100" href="#contact" data-menuanchor="contact">Get Started</a></li>
+        </ul>
       </div>
-      <!-- Grid column -->
-
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h3 class="text-uppercase mb-4 font-weight-bold">Downloads<hr class="divider my-4"></h3>
-        <p>
-          <a href="#!">Get our Brochure</a>
-        </p>
-        <p>
-          <a href="#!">Company Profile</a>
-        </p>
-    
-      </div>
-
-      <!-- Grid column -->
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h3 class="text-uppercase mb-4 font-weight-bold">Contact </h3><hr class="divider my-4">
-       
-         <p> <i class="fas fa-envelope mr-3"></i> computaqltd@gmail.com</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> + 260 976 774 302</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> + 260 977 145 208</p>
-      </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Footer links -->
+  </nav>
 
-    <hr>
+  <!-- ===== fullPage wrapper ===== -->
+  <div id="fullpage">
 
-    <!-- Grid row -->
-    <div class="row d-flex align-items-center">
-
-      <!-- Grid column -->
-      <div class="col-md-7 col-lg-8">
-
-        <!--Copyright-->
-        <p class="text-center text-md-left">© 2020 Copyright:
-          <a href="www.computaq.co.zm">
-            <strong> Computaq Zambia Limited</strong>
-          </a>
-        </p>
-
+    <!-- HOME -->
+    <div class="section hero" data-anchor="home">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="container container-x">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow reveal"><i class="bi bi-stars"></i> Next-Generation Technology</span>
+            <h1 class="mt-4 reveal">Simplify your <span class="grad-text">IT</span>,<br>Amplify your Results.</h1>
+            <p class="lead mt-3 reveal">Creative, dynamic IT solutions tailored to your business — enterprise-grade technology made accessible to organisations of every size.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4 reveal">
+              <a href="#services" class="btn btn-glow" data-menuanchor="services">Explore Services</a>
+              <a href="#contact" class="btn btn-ghost" data-menuanchor="contact"><i class="bi bi-telephone me-2"></i>Talk to us</a>
+            </div>
+            <form class="subscribe mt-4 reveal" onsubmit="return false;">
+              <input type="email" placeholder="Enter your email" aria-label="Email">
+              <button class="btn btn-glow px-4" type="submit">Get a quote</button>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-visual reveal">
+              <img class="hero-laptop" src="img/laptop.png">
+              <div class="orb-card c1"><i class="bi bi-hdd-network"></i> Networking</div>
+              <div class="orb-card c2"><i class="bi bi-shield-check"></i> Secure &amp; Reliable</div>
+              <div class="orb-card c3"><i class="bi bi-headset"></i> 24/7 Support</div>
+            </div>
+          </div>
+        </div>
+        <div class="marquee reveal">
+          <div class="marquee-track">
+            <span><i class="bi bi-check2-circle"></i> Network Services</span>
+            <span><i class="bi bi-check2-circle"></i> Process Automation</span>
+            <span><i class="bi bi-check2-circle"></i> Server &amp; Cloud Services</span>
+            <span><i class="bi bi-check2-circle"></i> Website &amp; App Development</span>
+            <span><i class="bi bi-check2-circle"></i> CCTV Surveillance</span>
+            <span><i class="bi bi-check2-circle"></i> IT Outsourcing</span>
+            <span><i class="bi bi-check2-circle"></i> Network Services</span>
+            <span><i class="bi bi-check2-circle"></i> Process Automation</span>
+            <span><i class="bi bi-check2-circle"></i> Server &amp; Cloud Services</span>
+            <span><i class="bi bi-check2-circle"></i> Website &amp; App Development</span>
+            <span><i class="bi bi-check2-circle"></i> CCTV Surveillance</span>
+            <span><i class="bi bi-check2-circle"></i> IT Outsourcing</span>
+          </div>
+        </div>
       </div>
-      <!-- Grid column -->
+      <div class="scroll-hint"><span>Scroll</span><i class="bi bi-chevron-double-down"></i></div>
+    </div>
 
-      <!-- Grid column -->
-      <div class="col-md-5 col-lg-4 ml-lg-0">
+    <!-- ABOUT -->
+    <div class="section" data-anchor="about">
+      <div class="container container-x">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-5">
+            <span class="eyebrow reveal"><i class="bi bi-people"></i> Who we are</span>
+            <h2 class="section-head mt-4 reveal" style="font-size:clamp(2rem,4.5vw,3rem);font-weight:800;">An IT partner built around <span class="grad-text">your</span> business</h2>
+            <p class="text-muted-2 mt-3 reveal">We are an Information Technology company providing creative and dynamic solutions for all types of industries. We were built around closing the gap that makes IT feel expensive and reserved only for large organisations.</p>
+            <p class="text-muted-2 reveal">Our services are tailored to fit your current business model and enhance productivity in your operations — a different approach driven by the way we work.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-3">
+              <div class="col-sm-6 reveal"><div class="value-card"><div class="ic"><i class="bi bi-patch-check"></i></div><h5 class="mb-2">Reliability</h5><p class="text-muted-2 mb-0 small">Consistency in the quality of every service we deliver.</p></div></div>
+              <div class="col-sm-6 reveal"><div class="value-card"><div class="ic"><i class="bi bi-lightbulb"></i></div><h5 class="mb-2">Innovation</h5><p class="text-muted-2 mb-0 small">Passionate dedication to translating ideas into reality.</p></div></div>
+              <div class="col-sm-6 reveal"><div class="value-card"><div class="ic"><i class="bi bi-award"></i></div><h5 class="mb-2">Excellence</h5><p class="text-muted-2 mb-0 small">We go the extra mile to produce high-quality goods and services.</p></div></div>
+              <div class="col-sm-6 reveal"><div class="value-card"><div class="ic"><i class="bi bi-emoji-smile"></i></div><h5 class="mb-2">Customer Focus</h5><p class="text-muted-2 mb-0 small">Your goals shape everything we build and support.</p></div></div>
+              <div class="col-12 reveal"><div class="value-card d-flex align-items-center gap-3"><div class="ic mb-0"><i class="bi bi-recycle"></i></div><div><h5 class="mb-1">Sustainability</h5><p class="text-muted-2 mb-0 small">Solutions designed to grow and last alongside your organisation.</p></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- Social buttons -->
-        <div class="text-center text-md-right">
-          <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-          </ul>
+    <!-- SERVICES -->
+    <div class="section" data-anchor="services">
+      <div class="container container-x">
+        <div class="text-center mb-4">
+          <span class="eyebrow reveal"><i class="bi bi-grid"></i> What we do</span>
+          <h2 class="section-head mt-3 reveal">Services that move your business forward</h2>
+          <p class="text-muted-2 mt-2 reveal mx-auto" style="max-width:60ch;">From the network up to the application layer — tap any service to see what's included.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="ic"><i class="bi bi-hdd-network"></i></div><h4>Network Services</h4><p>Design, build and secure the networks that connect your teams — structured cabling, Wi-Fi, routing and firewalls that simply work.</p><button class="service-link" data-bs-toggle="modal" data-bs-target="#m-network">Read more <i class="bi bi-arrow-right"></i></button></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="ic"><i class="bi bi-gear-wide-connected"></i></div><h4>Process Automation</h4><p>Replace repetitive manual work with reliable automated workflows that cut errors, save time and free your people for higher-value work.</p><button class="service-link" data-bs-toggle="modal" data-bs-target="#m-automation">Read more <i class="bi bi-arrow-right"></i></button></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="ic"><i class="bi bi-hdd-stack"></i></div><h4>Server / Cloud Services — Installation &amp; Maintenance</h4><p>On-premise servers and cloud platforms set up, secured, monitored and maintained — so your systems stay fast, safe and always available.</p><button class="service-link" data-bs-toggle="modal" data-bs-target="#m-server">Read more <i class="bi bi-arrow-right"></i></button></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="ic"><i class="bi bi-code-slash"></i></div><h4>Website &amp; App Development</h4><p>Custom websites, web apps and mobile apps built around your brand — fully responsive and ready to scale with your business.</p><button class="service-link" data-bs-toggle="modal" data-bs-target="#m-web">Read more <i class="bi bi-arrow-right"></i></button></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="ic"><i class="bi bi-camera-video-fill"></i></div><h4>CCTV Surveillance — Installation &amp; Maintenance</h4><p>Protect your premises with professionally installed IP CCTV — HD cameras, remote viewing and recording, kept running with routine maintenance.</p><button class="service-link" data-bs-toggle="modal" data-bs-target="#m-cctv">Read more <i class="bi bi-arrow-right"></i></button></div></div>
+          <div class="col-md-6 col-lg-4 reveal"><div class="service-card"><div class="ic"><i class="bi bi-headset"></i></div><h4>IT Outsourcing</h4><p>Hand us your day-to-day IT. From helpdesk support to managed infrastructure, we run it for a predictable monthly fee — no in-house team needed.</p><button class="service-link" data-bs-toggle="modal" data-bs-target="#m-outsourcing">Read more <i class="bi bi-arrow-right"></i></button></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPS — replace the three cards below with your real published apps (name, blurb, badges, link) -->
+    <div class="section" data-anchor="apps">
+      <div class="container container-x">
+        <div class="text-center mb-4">
+          <span class="eyebrow reveal"><i class="bi bi-window-stack"></i> Live products</span>
+          <h2 class="section-head mt-3 reveal">Apps we've built, <span class="grad-text">ready to use</span></h2>
+          <p class="text-muted-2 mt-2 reveal mx-auto" style="max-width:60ch;">Software we've developed and published for everyday business and personal use — pick one and get going.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+
+          <!-- APP 1 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="app-card">
+              <div class="ic"><i class="bi bi-chat-dots"></i></div>
+              <h4>ComputaQ Bulk SMS</h4>
+              <p>Send personalised SMS campaigns, OTPs and alerts to hundreds of contacts from one simple dashboard.</p>
+              <div class="app-badges">
+                <span class="app-badge"><i class="bi bi-globe2"></i> Web app</span>
+              </div>
+              <div class="app-actions">
+                <a href="#" class="btn btn-glow app-cta">Open app <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- APP 2 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="app-card">
+              <div class="ic"><i class="bi bi-shop"></i></div>
+              <h4>ComputaQ POS</h4>
+              <p>A fast point-of-sale for shops and stalls — products, sales, receipts and stock that keep working offline.</p>
+              <div class="app-badges">
+                <span class="app-badge"><i class="bi bi-android2"></i> Android</span>
+                <span class="app-badge"><i class="bi bi-windows"></i> Windows</span>
+              </div>
+              <div class="app-actions">
+                <a href="#" class="btn btn-glow app-cta">Get the app <i class="bi bi-download ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- APP 3 -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="app-card">
+              <div class="ic"><i class="bi bi-receipt"></i></div>
+              <h4>QInvoice</h4>
+              <p>Create professional invoices and receipts in seconds, track payments and share them with a tap.</p>
+              <div class="app-badges">
+                <span class="app-badge"><i class="bi bi-globe2"></i> Web app</span>
+                <span class="app-badge"><i class="bi bi-android2"></i> Android</span>
+              </div>
+              <div class="app-actions">
+                <a href="#" class="btn btn-glow app-cta">Try it free <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY -->
+    <div class="section" data-anchor="why">
+      <div class="container container-x">
+        <div class="row g-4 text-center mb-4">
+          <div class="col-6 col-lg-3 stat reveal"><h3 class="grad-text" data-count="100">0</h3><p class="text-muted-2 mb-0">% Tailored solutions</p></div>
+          <div class="col-6 col-lg-3 stat reveal"><h3 class="grad-text" data-count="6">0</h3><p class="text-muted-2 mb-0">Core service areas</p></div>
+          <div class="col-6 col-lg-3 stat reveal"><h3 class="grad-text" data-count="24" data-suffix="/7">0</h3><p class="text-muted-2 mb-0">Support availability</p></div>
+          <div class="col-6 col-lg-3 stat reveal"><h3 class="grad-text" data-count="1" data-suffix="-Click">0</h3><p class="text-muted-2 mb-0">Bulk SMS reach</p></div>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 reveal">
+            <span class="eyebrow"><i class="bi bi-shield-check"></i> Why ComputaQ</span>
+            <h2 class="section-head mt-3" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;">IT shouldn't be expensive or reserved for the big players</h2>
+            <p class="text-muted-2 mt-3">We bridge that gap. Whether you're a growing SME or an established enterprise, we deliver dependable technology that fits your budget and your operations.</p>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="row g-3">
+              <div class="col-sm-6"><div class="info-card p-4 h-100"><i class="bi bi-cash-coin fs-3" style="color:var(--accent)"></i><h5 class="mt-3 mb-1">Cost-effective</h5><p class="text-muted-2 small mb-0">Enterprise quality without the enterprise price tag.</p></div></div>
+              <div class="col-sm-6"><div class="info-card p-4 h-100"><i class="bi bi-rocket-takeoff fs-3" style="color:var(--primary)"></i><h5 class="mt-3 mb-1">Productivity-first</h5><p class="text-muted-2 small mb-0">Every solution is built to enhance how you operate.</p></div></div>
+              <div class="col-sm-6"><div class="info-card p-4 h-100"><i class="bi bi-people fs-3" style="color:var(--accent)"></i><h5 class="mt-3 mb-1">Friendly experts</h5><p class="text-muted-2 small mb-0">A trained team that explains, not just fixes.</p></div></div>
+              <div class="col-sm-6"><div class="info-card p-4 h-100"><i class="bi bi-phone fs-3" style="color:var(--primary)"></i><h5 class="mt-3 mb-1">All devices</h5><p class="text-muted-2 small mb-0">Responsive products that work everywhere.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLIENTS — replace each .client-logo placeholder with <img src="..." alt="Client name"> when logos are ready -->
+    <div class="section" data-anchor="clients">
+      <div class="container container-x">
+        <div class="text-center mb-4">
+          <span class="eyebrow reveal"><i class="bi bi-patch-check"></i> Our clients</span>
+          <h2 class="section-head mt-3 reveal">Teams that trust <span class="grad-text">ComputaQ</span></h2>
+          <p class="text-muted-2 mt-2 reveal mx-auto" style="max-width:60ch;">We're proud to support organisations of every size with dependable, tailored technology.</p>
+        </div>
+        <div class="row g-3 g-md-4 justify-content-center">
+          <!-- Drop a logo in by replacing the <div class="ph">…</div> with: <img src="logos/your-client.png" alt="Client name"> -->
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 1</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 2</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 3</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 4</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 5</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 6</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 7</span></div></div></div>
+          <div class="col-6 col-md-4 col-lg-3 reveal"><div class="client-logo"><div class="ph"><i class="bi bi-building"></i><span>Client 8</span></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT + FOOTER -->
+    <div class="section fp-auto-height-responsive" data-anchor="contact">
+      <div class="container container-x">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 reveal">
+            <span class="eyebrow"><i class="bi bi-chat-heart"></i> Get in touch</span>
+            <h2 class="section-head mt-3" style="font-size:clamp(2rem,4.5vw,2.8rem);font-weight:800;">Let's start your next project</h2>
+            <p class="text-muted-2 mt-2">Ready to begin? Give us a call or send a message and we'll get back to you as soon as possible.</p>
+            <div class="d-flex flex-column gap-3 mt-3">
+              <div class="contact-info-item"><div class="ic"><i class="bi bi-geo-alt"></i></div><div><h6 class="mb-1">Place of business</h6><p class="text-muted-2 mb-0 small">AI Business Complex, #12 Second Floor, Chachacha Road, Town Centre, Lusaka, Zambia</p></div></div>
+              <div class="contact-info-item"><div class="ic"><i class="bi bi-envelope"></i></div><div><h6 class="mb-1">Email</h6><a class="text-muted-2 small" href="mailto:computaqltd@gmail.com">computaqltd@gmail.com</a></div></div>
+              <div class="contact-info-item"><div class="ic"><i class="bi bi-telephone"></i></div><div><h6 class="mb-1">Phone</h6><p class="text-muted-2 mb-0 small"><a class="text-muted-2" href="tel:+260976774302">+260 976 774 302</a> · <a class="text-muted-2" href="tel:+260977145208">+260 977 145 208</a></p></div></div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal">
+            <div class="info-card p-4 p-md-5">
+              <form class="needs-validation row g-3" novalidate>
+                <div class="col-md-6"><label class="form-label" for="cName">Your name</label><input type="text" class="form-control form-control-x" id="cName" placeholder="Enter your name" required><div class="invalid-feedback">Please enter your name.</div></div>
+                <div class="col-md-6"><label class="form-label" for="cPhone">Phone number</label><input type="tel" class="form-control form-control-x" id="cPhone" placeholder="Phone number" required><div class="invalid-feedback">Please enter a phone number.</div></div>
+                <div class="col-12"><label class="form-label" for="cEmail">Email</label><input type="email" class="form-control form-control-x" id="cEmail" placeholder="you@example.com" required><div class="invalid-feedback">Please enter a valid email.</div></div>
+                <div class="col-12"><label class="form-label" for="cMsg">Your query / message</label><textarea class="form-control form-control-x" id="cMsg" rows="4" placeholder="Tell us about your project…" required></textarea><div class="invalid-feedback">Please add a short message.</div></div>
+                <div class="col-12"><button type="submit" class="btn btn-glow px-4"><i class="bi bi-send me-2"></i>Send message</button></div>
+                <div class="col-12"><div class="alert d-none mt-1" id="formAlert" role="alert" style="background:rgba(39,211,163,.12);border:1px solid rgba(39,211,163,.4);color:var(--accent);border-radius:12px;"><i class="bi bi-check-circle me-2"></i>Thanks! Your message is ready to send — we'll be in touch shortly.</div></div>
+              </form>
+            </div>
+          </div>
         </div>
 
+        <!-- Footer -->
+        <footer class="mt-5">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <a class="brand-mark" href="#home"><span class="dot">Q</span> Computa<span class="q">Q</span></a>
+              <p class="text-muted-2 mt-3" style="max-width:34ch;">Creative and dynamic IT solutions for industries of every size — based in Lusaka, Zambia.</p>
+              <div class="footer-social d-flex gap-2 mt-3">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div>
+            <div class="col-6 col-lg-2"><h6 class="mb-3">Services</h6><ul class="list-unstyled d-flex flex-column gap-2 small"><li><a href="#services">Network Services</a></li><li><a href="#services">Process Automation</a></li><li><a href="#services">Server / Cloud Services</a></li><li><a href="#services">Website &amp; App Development</a></li><li><a href="#services">CCTV Surveillance</a></li><li><a href="#services">IT Outsourcing</a></li></ul></div>
+            <div class="col-6 col-lg-2"><h6 class="mb-3">Company</h6><ul class="list-unstyled d-flex flex-column gap-2 small"><li><a href="#about">About Us</a></li><li><a href="#apps">Our Apps</a></li><li><a href="#why">Why ComputaQ</a></li><li><a href="#clients">Clients</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Company Profile</a></li><li><a href="#">Get our Brochure</a></li></ul></div>
+            <div class="col-lg-4"><h6 class="mb-3">Get in touch</h6><p class="text-muted-2 small mb-2"><i class="bi bi-geo-alt me-2" style="color:var(--primary)"></i>AI Business Complex, #12 Second Floor, Chachacha Road, Town Centre, Lusaka</p><p class="text-muted-2 small mb-2"><i class="bi bi-envelope me-2" style="color:var(--primary)"></i>computaqltd@gmail.com</p><p class="text-muted-2 small mb-0"><i class="bi bi-telephone me-2" style="color:var(--primary)"></i>+260 976 774 302 · +260 977 145 208</p></div>
+          </div>
+          <hr class="mt-4" style="border-color:var(--surface-line)">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 pb-3">
+            <p class="text-muted-2 small mb-0">© <span id="year"></span> Computaq Zambia Limited. All rights reserved.</p>
+            <p class="text-muted-2 small mb-0">www.computaq.co.zm</p>
+          </div>
+        </footer>
       </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
 
-  </div>
-  <!-- Footer Links -->
+  </div><!-- /#fullpage -->
 
-</footer>
-<!-- Footer -->
+  <!-- ===== Service Modals ===== -->
+  <div class="modal fade" id="m-network" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div class="d-flex align-items-center gap-3"><div class="modal-icon"><i class="bi bi-hdd-network"></i></div><h5 class="modal-title mb-0">Network Services That Work</h5></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="text-muted-2">We design, build and secure the networks that keep your teams connected and productive — from a single office to multi-site setups.</p><ul><li>Site surveys and network assessments</li><li>Structured cabling and WAN / LAN design and implementation</li><li>Routing, switching and VLAN configuration</li><li>Firewalls, security appliances and access control</li><li>Business Wi-Fi design and coverage optimisation</li><li>Ongoing monitoring and troubleshooting</li></ul></div></div></div></div>
+  <div class="modal fade" id="m-automation" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div class="d-flex align-items-center gap-3"><div class="modal-icon"><i class="bi bi-gear-wide-connected"></i></div><h5 class="modal-title mb-0">Automate Your Business</h5></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="text-muted-2">We map your repetitive, manual processes and replace them with reliable automated workflows. The result:</p><ul><li>Standardised and streamlined processes</li><li>Greater time and cost savings</li><li>Fewer errors and better data accuracy</li><li>Better allocation of your team's time and resources</li><li>Higher employee satisfaction</li><li>Improved visibility into process performance</li></ul></div></div></div></div>
+  <div class="modal fade" id="m-server" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div class="d-flex align-items-center gap-3"><div class="modal-icon"><i class="bi bi-hdd-stack"></i></div><h5 class="modal-title mb-0">Server &amp; Cloud — Installation &amp; Maintenance</h5></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="text-muted-2">Whether you run on-premise servers, the cloud, or a hybrid of both, we install, secure and maintain the systems your business depends on:</p><ul><li>Server and cloud platform setup and configuration</li><li>Cloud migration and hybrid deployments</li><li>Server administration, monitoring and troubleshooting</li><li>Security assessment and hardening</li><li>Backups, disaster recovery and uptime planning</li><li>Performance optimisation and application support</li></ul></div></div></div></div>
+  <div class="modal fade" id="m-web" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div class="d-flex align-items-center gap-3"><div class="modal-icon"><i class="bi bi-code-slash"></i></div><h5 class="modal-title mb-0">Websites &amp; Apps for Every Device</h5></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="text-muted-2">We build custom websites and applications around your brand — responsive, fast and easy to manage.</p><ul><li>Website design &amp; development</li><li>Content management systems</li><li>Web applications and business software</li><li>Mobile applications (Android &amp; cross-platform)</li><li>Social media integration — Facebook, X, YouTube and more</li><li>Hosting, domains and ongoing maintenance</li></ul></div></div></div></div>
+  <div class="modal fade" id="m-cctv" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div class="d-flex align-items-center gap-3"><div class="modal-icon"><i class="bi bi-camera-video-fill"></i></div><h5 class="modal-title mb-0">CCTV Surveillance — Installation &amp; Maintenance</h5></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="text-muted-2">Protect your premises, staff and assets with professionally installed CCTV — and keep it running with routine maintenance.</p><ul><li>Site assessment and camera placement planning</li><li>HD / IP camera supply and installation</li><li>DVR / NVR setup and secure storage</li><li>Remote viewing on phone and computer</li><li>Motion alerts and recording configuration</li><li>Routine servicing, repairs and upgrades</li></ul></div></div></div></div>
+  <div class="modal fade" id="m-outsourcing" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><div class="d-flex align-items-center gap-3"><div class="modal-icon"><i class="bi bi-headset"></i></div><h5 class="modal-title mb-0">IT Outsourcing</h5></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><p class="text-muted-2">Let us be your IT department. We take care of your day-to-day technology for a predictable monthly fee — so you can focus on your business.</p><ul><li>Helpdesk and remote desktop support</li><li>Managed servers, networks and devices</li><li>Proactive monitoring and preventative maintenance</li><li>User account, email and access management</li><li>Vendor management and IT procurement advice</li><li>Flexible monthly support plans to fit your size</li></ul></div></div></div></div>
 
-
-</div>
-</div>
-
-
-			
-</div>
-	  
-</div>
-		
-</div>
-</div>
-
-<script type="text/javascript" src="dist/fullpage.js"></script>
-<script src="bootstrap-4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="bootstrap-4.4.1/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="bootstrap-4.4.1/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="bootstrap-4.4.1/jquery/jquery.min.js"></script>
-<script src="bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
-<!-- Custom scripts for this template -->
-<script src="js/coming-soon.min.js"></script>
-<script type="text/javascript">
-
-/*  var myFullpage = new fullpage('#fullpage', {
-		anchors: ['firstPage', 'secondPage', '3rdPage'],
-        sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
-		navigation:true,
-		navigationposition: 'right',
-		Navigationtooltips:['firstPage','Second Page', 'Last Page']
-		});*/
-
-  var myFullpage = new fullpage('#fullpage', {
-       verticalCentered: false,
-		anchors: ['Home', 'About_us', 'Our_Sourcing', 'Services', 'support', 'Contact_us'],
-        sectionsColor: ['#FF9F00', '#8FB98', '#EAE1C0', '#EAE1C0', '#EAE1C0' , '#EAE1C0'],
-        slidesNavigation: true,
-		navigation:true,
-		navigationTooltips: ['Home', 'About Us', 'Our Sourcing', 'Services', 'support', 'Contact us'],
-        showActiveTooltip: true,
-		menu: '#menu',
-		lazyLoad: true,
-
-        //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
-        css3:false
-    });
-
-// Disable form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-
-
-
-</script>
+  <!-- ===== Scripts ===== -->
+  <!-- Bootstrap (modals, collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- scrollOverflow vendor MUST load before fullpage.js -->
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.8/vendors/scrolloverflow.min.js"></script>
+  <!-- fullPage.js -->
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.8/dist/fullpage.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
